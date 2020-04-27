@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/handpose"></script>
+    <script>
+        async function init() {
+            // Load the MediaPipe handpose model.
+            const video = document.getElementById('video');
+
+            if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+                    video.srcObject = stream;
+                    video.play();
+                });
+            }
+            model = await handpose.load();
+            var myInterval; 
+            myInterval = setInterval(main,200);
+
+        }
+        async function main() {
+            // Pass in a video stream (or an image, canvas, or 3D tensor) to obtain a
+            // hand prediction from the MediaPipe graph.
+            const predictions = await model.estimateHands(video);
+            c = document.getElementById("canvas");
+            ctx = c.getContext("2d");
+            clearCanvas();
+            if (predictions.length > 0) {
+                for (let i = 0; i < predictions.length; i++) {
+                keypoints = predictions[i].landmarks;
+                prevX= 0
+                prevY= 0
+                for (let i = 0; i < keypoints.length; i++) {
+                    [x, y, z] = keypoints[i];
+                    if (prevX > 0){
+                        connectFinger(prevX, prevY, x, y)
+                    }
+                    markFinger(x, y);
+                    prevX = x
+                    prevY = y
+                }
+                }
+            }
+        }
+    function clearCanvas() {
+        ctx.clearRect(0, 0, 640, 480);
+    }
+    function markFinger(x, y) {
+  
+        ctx.fillStyle = "#FF0000";
+        ctx.beginPath();
+        ctx.arc(x, y, 3, 0, 2 * Math.PI);
+        ctx.fill();
+    }
+    function connectFinger(prevX, prevY, x, y) {
+     
+        ctx.strokeStyle = "#FF0000";
+        ctx.beginPath();
+        ctx.moveTo(prevX, prevY);
+        ctx.lineTo(x, y);
+        ctx.stroke();
+    }
+    </script>
+    <style>
+        video, canvas {
+            position: absolute;
+            top: 10;
+            left: 0;
+        }
+        button {
+            position: absolute;
+            top: 300;
+        };
+    </style>
+</head>
+ <body onload="init()">
+      <h1>Hand Tracker</h1>
+      <p>Initial load time is quite high!</p>
+      <div class="wrapper">
+        <video id="video" width="640" height="480" autoplay playsinline></video>
+        <canvas id="canvas" width="640" height="480"></canvas>
+      </div>
+</body>
+</html>
