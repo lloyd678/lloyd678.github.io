@@ -1,0 +1,295 @@
+div{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body{
+  background: #ededed;
+}
+
+#all{
+  margin-left: 20px;
+  width: 900px;
+}
+
+#poster{
+  width: 600px;
+  display: block;
+  float: left;
+}
+
+#buttons{
+  width: 300px;
+  float: left;
+}
+
+#text{
+  width: 300px;
+  padding: 0px 30px 0px 0px;
+  display: block;
+  float: left;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: #242424;
+}
+
+#mobile-text {
+  display: none;
+}
+
+#text a{
+  color: #4a86f5;
+  font-weight: bold;
+}
+
+#text a:hover{
+  color: #2a2f89;
+}
+
+
+
+#topBorder{
+  width: 600px;
+  height: 29px;
+  background: url('img/topBorder.png');
+  background-position: center center;
+  float: left;
+}
+
+#bottomBorder{
+  width: 600px;
+  height: 29px;
+  background: url('img/bottomBorder.png');
+  background-position: center center;
+  float: left;
+}
+
+#middleSection{
+  width: 600px;
+  background: #fff500;
+  float: left;
+}
+
+#leftBorder{
+  width: 29px;
+  background: url('img/leftBorder.png') repeat;
+  display: table-cell;
+  min-height: 500px;
+}
+
+#rightBorder{
+  width: 29px;
+  background: url('img/rightBorder.png') repeat;
+  display: table-cell;
+  min-height: 500px;
+}
+
+#centerSection{
+  width:542px;
+  display: table-cell;
+}
+
+.arrow{
+  width: 542px;
+  height: 50px;
+  float: left;
+  background: url('img/downArrow.png') no-repeat;
+  background-position: center center;
+}
+
+.posterLine{
+  font-family: FrutigerFont, Impact, ImpactFont;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 100px;
+  letter-spacing: -4px;
+  line-height: 100px;
+  padding: 0px 30px 0px 30px;
+  margin: 10px 0px 10px 0px;
+  float: left;
+  width: 542px;
+}
+
+#line3{
+  margin-bottom: 10px;
+}
+
+.generateButton {
+  display: block;
+  width: 200px;
+  height: 80px;
+  margin: 30px 30px 30px 0px;
+  font-family: FrutigerFont, Impact, ImpactFont;
+  text-transform: uppercase;
+  border: 0px solid #000000;
+  background: #01a43b;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  font-size: 30px;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  cursor: pointer;
+}
+
+.generateButton:hover {
+  background: #12843b;
+}
+
+.generateButton:active {
+  background: #074f21;
+}
+
+.generateButton:focus {
+  outline: 0;
+}
+
+
+.saveButton {
+  display: block;
+  width: 200px;
+  height: 60px;
+  margin: 30px 30px 30px 0px;
+  font-family: FrutigerFont, Impact, ImpactFont;
+  text-transform: uppercase;
+  border: 0px solid #000000;
+  background: #5c9d73;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
+  cursor: pointer;
+}
+
+.saveButton:hover {
+  background: #45845c;
+}
+
+.saveButton:active{
+  background: #225233;
+}
+
+.saveButton:focus {
+  outline: 0;
+}
+
+canvas{
+  display: none;
+}
+input {
+  width: 80%;
+  padding:10px;
+  margin:10px;
+}
+
+@media (orientation: portrait) {
+  @media (min-width: 900px) {
+
+  #text{
+    display: none;
+  }
+
+  #poster-holder{
+    height: 1410px;
+  }
+
+  #mobile-text {
+    display: block;
+    width: 900px;
+    margin: auto;
+    padding: 0px 30px 0px 0px;
+    display: block;
+    float: left;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13pt;
+    line-height: 40pt;
+    color: #242424;
+  }
+
+  #buttons{
+    width: 95vw;
+    height: 200px;
+  }
+
+  .generateButton{
+    float: left;
+    padding: 20px 60px 20px 60px;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+  }
+
+  .saveButton{
+    float: left;
+    padding: 20px 60px 20px 60px;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+  }
+
+  #all{
+    width: 95vw;
+    margin: auto;
+  }
+
+  #poster{
+    width: 95vw;
+  }
+
+  #topBorder{
+    width: 95vw;
+    height: 60px;
+    background-size: cover;
+  }
+
+  #bottomBorder{
+    width: 95vw;
+    height: 60px;
+    background-size: cover;
+  }
+
+  #leftBorder{
+    width: 60px;
+    background-size: 60px;
+  }
+
+  #rightBorder{
+    width: 60px;
+    background-size: 60px;
+  }
+
+  #middleSection{
+    width: 95vw;
+  }
+
+  .arrow{
+    width: calc(95vw - 60px - 60px);
+    height: 105px;
+    background-size: 170px 75px;
+  }
+
+  #centerSection{
+    width: calc(95vw - 60px - 60px);
+  }
+
+  .posterLine{
+    font-size: 150px;
+    line-height: 150px;
+    width: calc(95vw - 60px - 60px);
+  }
+  }
+}
