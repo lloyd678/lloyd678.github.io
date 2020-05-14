@@ -4,6 +4,16 @@ div{
   -webkit-box-sizing: border-box;
 }
 
+@font-face {
+  font-family: ImpactFont;
+  src: url('impact.ttf');
+}
+
+@font-face {
+  font-family: FrutigerFont;
+  src: url('frutiger-77-black-condensed.otf');
+}
+
 body{
   background: #ededed;
 }
