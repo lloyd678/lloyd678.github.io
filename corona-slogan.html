@@ -1,0 +1,50 @@
+
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Coronavirus Slogan Generator</title>
+
+    <link rel="stylesheet" type="text/css" href="css/slogan.css"></link>
+    <script type="text/javascript" src="js/query-3.4.1.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/slogan.js"></script>
+    <meta name="author" content="Lloyd Wilson">
+
+  </head>
+  <body>
+    <div id="all">
+      <div id="buttons">
+        <input type="text" name="topline" id="toplinemessage" placeholder="Top Line"/>
+        <input type="text" name="middleline" id="middlelinemessage" placeholder="Middle Line" />
+        <input type="text" name="bottomline" id="bottomlinemessage" placeholder="Bottom Line" />
+        <button class="generateButton">Generate</button>
+        <button class="saveButton">Save image</button>
+
+
+      </div>
+      <div id="poster-holder">
+        <div id="poster">
+          <div id="topBorder"></div>
+
+          <div id="middleSection">
+            <div id="leftBorder"></div>
+            <div id="centerSection">
+              <div id="topline" class="posterLine">Stay alert</div>
+              <div class="arrow"></div>
+              <div id="middleline" class="posterLine">Control the virus</div>
+              <div class="arrow"></div>
+              <div id="bottomline" class="posterLine">Save lives</div>
+            </div>
+            <div id="rightBorder"></div>
+          </div>
+
+          <div id="bottomBorder"></div>
+        </div>
+      </div>
+
+    </div>
+    <div id="imgOut"></div>
+  </body>
+</html>
