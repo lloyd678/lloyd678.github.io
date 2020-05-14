@@ -70,7 +70,10 @@ $(document).ready(function(){
       $('#bottomline').css("line-height", fontSize[0]);
       $('#bottomline').css("letter-spacing", "-4px");
     }
-
+    gtag('event', "Button Click", {
+      'event_category': "Generate",
+      'event_label': "Generate"
+    });
   });
 
   $(".saveButton").click(function(){
@@ -81,6 +84,10 @@ $(document).ready(function(){
       var filename = "coronaslogan" + parseInt(Math.random()*1000000);
       var theCanvas = document.getElementById('savedCanvas');
       saveAs(theCanvas.toDataURL(), filename);
+      gtag('event', "Button Click", {
+        'event_category': "Save",
+        'event_label': "Save"
+      });
     });
   });
 
