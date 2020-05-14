@@ -22,25 +22,25 @@ body{
   height:100%;
   display: block;
 }
-#all{
+.all{
   margin-left: 20px;
   width: 900px;
   max-width: calc(100vw + 40px);
   margin-right:20px;
 }
 
-#poster{
+.poster{
   width: 600px;
   display: block;
   float: left;
 }
 
-#buttons{
+.buttons{
   width: 300px;
   float: left;
 }
 
-#text{
+.text{
   width: 300px;
   padding: 0px 30px 0px 0px;
   display: block;
@@ -51,21 +51,21 @@ body{
   color: #242424;
 }
 
-#mobile-text {
+.mobile-text {
   display: none;
 }
 
-#text a{
+.text a{
   color: #4a86f5;
   font-weight: bold;
 }
 
-#text a:hover{
+.text a:hover{
   color: #2a2f89;
 }
 
 
-#topBorder{
+.topBorder{
   width: 600px;
   height: 29px;
   background: url('../img/topBorder.png');
@@ -73,7 +73,7 @@ body{
   float: left;
 }
 
-#bottomBorder{
+.bottomBorder{
   width: 600px;
   height: 29px;
   background: url('../img/bottomBorder.png');
@@ -81,27 +81,27 @@ body{
   float: left;
 }
 
-#middleSection{
+.middleSection{
   width: 600px;
   background: #fff500;
   float: left;
 }
 
-#leftBorder{
+.leftBorder{
   width: 29px;
   background: url('../img/leftBorder.png') repeat;
   display: table-cell;
   min-height: 500px;
 }
 
-#rightBorder{
+.rightBorder{
   width: 29px;
   background: url('../img/rightBorder.png') repeat;
   display: table-cell;
   min-height: 500px;
 }
 
-#centerSection{
+.centerSection{
   width:542px;
   display: table-cell;
 }
@@ -127,7 +127,7 @@ body{
   width: 542px;
 }
 
-#line3{
+.bottomline{
   margin-bottom: 10px;
 }
 
@@ -216,15 +216,15 @@ input {
 @media (orientation: portrait) {
   @media (min-width: 900px) {
 
-  #text{
+  .text{
     display: none;
   }
 
-  #poster-holder{
+  .poster-holder{
     height: 1410px;
   }
 
-  #mobile-text {
+  .mobile-text {
     display: block;
     width: 900px;
     margin: auto;
@@ -237,7 +237,7 @@ input {
     color: #242424;
   }
 
-  #buttons{
+  .buttons{
     width: 95vw;
   }
 
@@ -257,38 +257,38 @@ input {
     font-size: 50px;
   }
 
-  #all{
+  .all{
     width: 95vw;
     margin: auto;
   }
 
-  #poster{
+  .poster{
     width: 95vw;
   }
 
-  #topBorder{
-    width: 95vw;
-    height: 60px;
-    background-size: cover;
-  }
-
-  #bottomBorder{
+  .topBorder{
     width: 95vw;
     height: 60px;
     background-size: cover;
   }
 
-  #leftBorder{
+  .bottomBorder{
+    width: 95vw;
+    height: 60px;
+    background-size: cover;
+  }
+
+  .leftBorder{
     width: 60px;
     background-size: 60px;
   }
 
-  #rightBorder{
+  .rightBorder{
     width: 60px;
     background-size: 60px;
   }
 
-  #middleSection{
+  .middleSection{
     width: 95vw;
   }
 
@@ -298,7 +298,7 @@ input {
     background-size: 170px 75px;
   }
 
-  #centerSection{
+  .centerSection{
     width: calc(95vw - 60px - 60px);
   }
 

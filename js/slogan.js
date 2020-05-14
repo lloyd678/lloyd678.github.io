@@ -17,58 +17,58 @@ $(document).ready(function(){
   $(".generateButton").click(function(){
 
     message1 = $("#toplinemessage").val()
-    $("#topline").html(message1);
+    $(".topline").html(message1);
     if(message1.length>10){
-      $('#topline').css("font-size", fontSize[2]);
-      $('#topline').css("line-height", fontSize[2]);
-      $('#topline').css("letter-spacing", "-2px");
+      $('.topline').css("font-size", fontSize[2]);
+      $('.topline').css("line-height", fontSize[2]);
+      $('.topline').css("letter-spacing", "-2px");
 
     }
     else if(message1.length>7){
-      $('#topline').css("font-size", fontSize[1]);
-      $('#topline').css("line-height", fontSize[1]);
-      $('#topline').css("letter-spacing", "-3px");
+      $('.topline').css("font-size", fontSize[1]);
+      $('.topline').css("line-height", fontSize[1]);
+      $('.topline').css("letter-spacing", "-3px");
     }
     else{
-      $('#topline').css("font-size", fontSize[0]);
-      $('#topline').css("line-height", fontSize[0]);
-      $('#topline').css("letter-spacing", "-4px");
+      $('.topline').css("font-size", fontSize[0]);
+      $('.topline').css("line-height", fontSize[0]);
+      $('.topline').css("letter-spacing", "-4px");
     }
 
     message2 = $("#middlelinemessage").val()
-    $("#middleline").html(message2);
+    $(".middleline").html(message2);
     if(message2.length>10){
-      $('#middleline').css("font-size", fontSize[2]);
-      $('#middleline').css("line-height", fontSize[2]);
-      $('#middleline').css("letter-spacing", "-2px");
+      $('.middleline').css("font-size", fontSize[2]);
+      $('.middleline').css("line-height", fontSize[2]);
+      $('.middleline').css("letter-spacing", "-2px");
     }
     else if (message2.length>7){
-      $('#middleline').css("font-size", fontSize[1]);
-      $('#middleline').css("line-height", fontSize[1]);
-      $('#middleline').css("letter-spacing", "-3px");
+      $('.middleline').css("font-size", fontSize[1]);
+      $('.middleline').css("line-height", fontSize[1]);
+      $('.middleline').css("letter-spacing", "-3px");
     }
     else{
-      $('#middleline').css("font-size", fontSize[0]);
-      $('#middleline').css("line-height", fontSize[0]);
-      $('#middleline').css("letter-spacing", "-4px");
+      $('.middleline').css("font-size", fontSize[0]);
+      $('.middleline').css("line-height", fontSize[0]);
+      $('.middleline').css("letter-spacing", "-4px");
     }
 
     message3 = $("#bottomlinemessage").val()
-    $("#bottomline").html(message3);
+    $(".bottomline").html(message3);
     if(message3.length>10){
-      $('#bottomline').css("font-size", fontSize[2]);
-      $('#bottomline').css("line-height", fontSize[2]);
-      $('#bottomline').css("letter-spacing", "-2px");
+      $('.bottomline').css("font-size", fontSize[2]);
+      $('.bottomline').css("line-height", fontSize[2]);
+      $('.bottomline').css("letter-spacing", "-2px");
     }
     else if(message3.length>7){
-      $('#bottomline').css("font-size", fontSize[1]);
-      $('#bottomline').css("line-height", fontSize[1]);
-      $('#bottomline').css("letter-spacing", "-3px");
+      $('.bottomline').css("font-size", fontSize[1]);
+      $('.bottomline').css("line-height", fontSize[1]);
+      $('.bottomline').css("letter-spacing", "-3px");
     }
     else{
-      $('#bottomline').css("font-size", fontSize[0]);
-      $('#bottomline').css("line-height", fontSize[0]);
-      $('#bottomline').css("letter-spacing", "-4px");
+      $('.bottomline').css("font-size", fontSize[0]);
+      $('.bottomline').css("line-height", fontSize[0]);
+      $('.bottomline').css("letter-spacing", "-4px");
     }
     gtag('event', "Button Click", {
       'event_category': "Generate",
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
   $(".saveButton").click(function(){
     $("#imgOut").html("");
-    html2canvas(document.querySelector("#poster")).then(canvas => {
+    html2canvas(document.querySelector(".poster")).then(canvas => {
       document.getElementById('imgOut').appendChild(canvas)
       $(canvas).attr('id', 'savedCanvas');
       var filename = "coronaslogan" + parseInt(Math.random()*1000000);
