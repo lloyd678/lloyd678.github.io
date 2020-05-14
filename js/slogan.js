@@ -18,13 +18,13 @@ $(document).ready(function(){
 
     message1 = $("#toplinemessage").val()
     $("#topline").html(message1);
-    if(message1.length>24){
+    if(message1.length>10){
       $('#topline').css("font-size", fontSize[2]);
       $('#topline').css("line-height", fontSize[2]);
       $('#topline').css("letter-spacing", "-2px");
 
     }
-    else if(message1.length>13){
+    else if(message1.length>7){
       $('#topline').css("font-size", fontSize[1]);
       $('#topline').css("line-height", fontSize[1]);
       $('#topline').css("letter-spacing", "-3px");
@@ -37,12 +37,12 @@ $(document).ready(function(){
 
     message2 = $("#middlelinemessage").val()
     $("#middleline").html(message2);
-    if(message2.length>24){
+    if(message2.length>10){
       $('#middleline').css("font-size", fontSize[2]);
       $('#middleline').css("line-height", fontSize[2]);
       $('#middleline').css("letter-spacing", "-2px");
     }
-    else if (message2.length>13){
+    else if (message2.length>7){
       $('#middleline').css("font-size", fontSize[1]);
       $('#middleline').css("line-height", fontSize[1]);
       $('#middleline').css("letter-spacing", "-3px");
@@ -55,12 +55,12 @@ $(document).ready(function(){
 
     message3 = $("#bottomlinemessage").val()
     $("#bottomline").html(message3);
-    if(message3.length>24){
+    if(message3.length>10){
       $('#bottomline').css("font-size", fontSize[2]);
       $('#bottomline').css("line-height", fontSize[2]);
       $('#bottomline').css("letter-spacing", "-2px");
     }
-    else if(message3.length>13){
+    else if(message3.length>7){
       $('#bottomline').css("font-size", fontSize[1]);
       $('#bottomline').css("line-height", fontSize[1]);
       $('#bottomline').css("letter-spacing", "-3px");
