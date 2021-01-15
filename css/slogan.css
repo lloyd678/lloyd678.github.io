@@ -23,10 +23,9 @@ body{
   display: block;
 }
 .all{
-  margin-left: 20px;
   width: 900px;
   max-width: calc(100vw + 40px);
-  margin-right:20px;
+  margin: 30px auto;
 }
 
 .poster{
@@ -211,6 +210,12 @@ input {
   width: 80%;
   padding:10px;
   margin:10px;
+}
+.credit {
+  float: left;
+  margin: 30px auto;
+  width: 100%;
+  text-align: center;
 }
 
 @media (orientation: portrait) {
